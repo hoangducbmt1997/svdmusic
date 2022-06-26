@@ -1,0 +1,49 @@
+
+.ms-ranking-song {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.title-ranking-song{
+    z-index: 5;
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+}
+.ms-ranking-bg {
+    width: 100%;
+    filter: blur(2px);
+    height: auto;
+}
+.blur-song-bg{
+    position: absolute;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+180deg,var(--layout-bg),var(--bg-index));
+    z-index: 1;
+}
+.blur-song-bg-1 {
+    position: absolute;
+    background-image: linear-gradient(
+        180deg,hsla(0,0%,100%,0) 2%,var(--bg-index));
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+.list-music-ranking li{
+    width: 100% !important;
+}
+.top-ranking-song li{
+    list-style: none;
+    padding-top: 20px;
+}
+
+/*--Rank 100--*/
+.blur-100-song{
+    background-color: var(--bg-index);
+}
