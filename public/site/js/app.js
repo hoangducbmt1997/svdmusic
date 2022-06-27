@@ -1,9 +1,8 @@
 const start = document.querySelectorAll(".list-music-item");
 if (start.length == 0) {
     document.getElementById('control-player').classList.add("hidden");
-}
-else {
-    window.onload = async () => {
+} else {
+    window.onload = async() => {
         getSong();
     }
 }
@@ -36,7 +35,8 @@ const playLyrics = document.querySelectorAll('.play-lyrics');
 
 var arraySongs = [];
 var lyric;
-var url = 'http://localhost/svdmusic/';
+var url = window.location.hostname + '/';
+
 var isRandom = false;
 let isActiveSong = false;
 const btnVolume = document.querySelector('.btn-volume');
@@ -62,18 +62,17 @@ if (typeof audio != "undefined") {
     audio.volume = valueVolume;
 }
 /*--Set number and data-index  ranking song--*/
-for(let i = 0; i < numberTop.length; i++) {
-    if(i % 3){
-        numberTop[i].innerHTML = '#' +(i%3+1)+'st';
-        numberTop[i].classList.add("number-"+(i % 3 + 1));
+for (let i = 0; i < numberTop.length; i++) {
+    if (i % 3) {
+        numberTop[i].innerHTML = '#' + (i % 3 + 1) + 'st';
+        numberTop[i].classList.add("number-" + (i % 3 + 1));
         listMusicTop[i].setAttribute("data-index", (i % 3));
-        
+
+    } else {
+        numberTop[i].innerHTML = '#' + 1 + 'st';
+        numberTop[i].classList.add("number-" + 1);
+        listMusicTop[i].setAttribute("data-index", 0);
     }
-    else{
-        numberTop[i].innerHTML = '#' +1+'st';
-        numberTop[i].classList.add("number-"+1);
-        listMusicTop[i].setAttribute("data-index", 0);   
-    }    
 }
 
 
@@ -83,7 +82,7 @@ for (let i = 0; i < songs.length; i++) {
     dataNumber[i].setAttribute("data-index", i);
 }
 
-getSong = async () => {
+getSong = async() => {
     let songs = document.querySelectorAll(".list-music-item");
 
     for (let i = 0; i < songs.length; i++) {
@@ -92,29 +91,29 @@ getSong = async () => {
     loadSong();
 }
 var check = 0;
-getLrc = function (url) {
-    $.ajax({
-        type: "get",
-        url: url,
-        dataType: "text",
-    })
-        .done(function (data) {
-            var text = data;
-            text = text.replace(/\n/g, '#').replace(/\r/g, '').replace(/######/g, '#').replace(/######/g, '#').replace(/####/g, '#').replace(/###/g, '#').replace(/##/g, '#');
-            lyric = parseLyric(text);
-            appendLyric(lyric);
+getLrc = function(url) {
+        $.ajax({
+                type: "get",
+                url: url,
+                dataType: "text",
+            })
+            .done(function(data) {
+                var text = data;
+                text = text.replace(/\n/g, '#').replace(/\r/g, '').replace(/######/g, '#').replace(/######/g, '#').replace(/####/g, '#').replace(/###/g, '#').replace(/##/g, '#');
+                lyric = parseLyric(text);
+                appendLyric(lyric);
 
-        })
-        .fail(function () {
-            document.getElementById("abc").innerHTML = "<p class='alert-song'> Bài hát hiện tại chưa có lời </p>";
-        });
-},
-    appendLyric = function (lyric) {
-        lyric.forEach(function (v, i, a) {
+            })
+            .fail(function() {
+                document.getElementById("abc").innerHTML = "<p class='alert-song'> Bài hát hiện tại chưa có lời </p>";
+            });
+    },
+    appendLyric = function(lyric) {
+        lyric.forEach(function(v, i, a) {
             $("<p id='line-" + i + "'>").html(v[1]).appendTo(".lyric");
         });
     },
-    scrollbar = function () {
+    scrollbar = function() {
         var line = $(".current-line"),
             scrolltop = $(".lyric").scrollTop(),
             anchor = line.offset().top;
@@ -129,7 +128,7 @@ getLrc = function (url) {
             }
         }
     };
-loadSong = async () => {
+loadSong = async() => {
     song = songIndex;
     if (typeof audio != "undefined") {
         audio.src = arraySongs[song];
@@ -144,7 +143,7 @@ loadSong = async () => {
         avatarControl.src = detailSong[song].getAttribute("data-avatar");
         imgBlurSong.src = detailSong[song].getAttribute("data-img");
         getLrc(detailSong[song].getAttribute("data-lrc"));
-        idSong.innerHTML = '<a href="'+url+''+detailSong[song].getAttribute("data-id")+'.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';       
+        idSong.innerHTML = '<a href="' + url + '' + detailSong[song].getAttribute("data-id") + '.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';
 
         document.title = detailSong[song].getAttribute("data-name") + ", " + detailSong[song].getAttribute("data-creator");
         if ('mediaSession' in navigator) {
@@ -162,22 +161,22 @@ loadSong = async () => {
                     { src: detailSong[song].getAttribute("data-avatar"), sizes: '512x512', type: 'image/png' },
                 ]
             });
-            navigator.mediaSession.setActionHandler('previoustrack', function () {
+            navigator.mediaSession.setActionHandler('previoustrack', function() {
                 // User clicked "Previous Track" media notification icon.
                 prevSong();
                 playSong();
 
             });
-            navigator.mediaSession.setActionHandler('nexttrack', function () {
+            navigator.mediaSession.setActionHandler('nexttrack', function() {
                 // User clicked "Next Track" media notification icon.
                 nextSong();
                 playSong();
             });
-            navigator.mediaSession.setActionHandler('pause', function () {
+            navigator.mediaSession.setActionHandler('pause', function() {
                 // User clicked "Pause Track" media notification icon.
                 pauseSong();
             });
-            navigator.mediaSession.setActionHandler('play', function () {
+            navigator.mediaSession.setActionHandler('play', function() {
                 // User clicked "Play Track" media notification icon.
                 playSong();
             });
@@ -271,16 +270,16 @@ function parseLyric(text) {
         lines = lines.slice(1);
     };
     lines[lines.length - 1].length === 0 && lines.pop();
-    lines.forEach(function (v /*value array*/, i /*index*/, a /*array*/) {
+    lines.forEach(function(v /*value array*/ , i /*index*/ , a /*array*/ ) {
         var time = v.match(pattern),
             value = v.replace(pattern, '');
-        time.forEach(function (v1, i1, a1) {
+        time.forEach(function(v1, i1, a1) {
             var t = v1.slice(1, -1).split(':');
             result.push([parseInt(t[0], 10) * 60 + parseFloat(t[1]), value]);
         });
     });
     //SORT SIZE BY TIME
-    result.sort(function (a, b) {
+    result.sort(function(a, b) {
         return a[0] - b[0];
     });
     return result;
@@ -354,7 +353,7 @@ if (btnVolume) {
 if (listSong) {
     listSong.addEventListener("click", (e) => {
         songIndex = e.target.closest("li").getAttribute("data-index");
-        idSong.innerHTML = '<a href="'+url+''+e.target.closest('li').getAttribute("data-id")+'.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';       
+        idSong.innerHTML = '<a href="' + url + '' + e.target.closest('li').getAttribute("data-id") + '.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';
         if (resetLyrics) {
             resetLyrics.innerHTML = `<div class="lyric"></div>`;
         }
@@ -367,7 +366,7 @@ if (listSong) {
 if (listRankSong != null) {
     listRankSong.addEventListener("click", (e) => {
         songIndex = e.target.closest("li").getAttribute("data-index");
-        idSong.innerHTML = '<a href="'+url+''+e.target.closest('li').getAttribute("data-id")+'.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';       
+        idSong.innerHTML = '<a href="' + url + '' + e.target.closest('li').getAttribute("data-id") + '.html"><span class="play-lyrics material-icons-outlined">mic_none</span></a>';
         resetLyrics.innerHTML = `<div class="lyric"></div>`;
         loadSong(songIndex);
         playSong();
@@ -382,18 +381,18 @@ for (let i = 0; i < addPlaylist.length; i++) {
 }
 
 for (let i = 0; i < addPlaylist.length; i++) {
-    addPlaylist[i].addEventListener('click', function (event) {
+    addPlaylist[i].addEventListener('click', function(event) {
         event.stopPropagation();
     })
 }
 
 for (let i = 0; i < removePlaylist.length; i++) {
-    removePlaylist[i].addEventListener("click", function (event) {
+    removePlaylist[i].addEventListener("click", function(event) {
         event.stopPropagation();
     })
 }
 for (let i = 0; i < playLyrics.length; i++) {
-    playLyrics[i].addEventListener("click", function (event) {
+    playLyrics[i].addEventListener("click", function(event) {
         event.stopPropagation();
     })
 }
@@ -430,21 +429,21 @@ if (typeof audio != "undefined") {
             }, 2000)
         }
     })
-    audio.ontimeupdate = function () {
+    audio.ontimeupdate = function() {
         if (audio.duration) {
             const progressPercent = (audio.currentTime / audio.duration) * 100;
             progressBar.value = progressPercent;
         }
     };
-    progressBar.onchange = function (e) {
+    progressBar.onchange = function(e) {
         const seekTime = (audio.duration / 100) * e.target.value;
         audio.currentTime = seekTime;
     };
-    rangeVolume.onchange = function (e) {
+    rangeVolume.onchange = function(e) {
         valueVolume = e.target.value / 100;
         audio.volume = valueVolume;
     }
-    audio.addEventListener('timeupdate', function (e) {
+    audio.addEventListener('timeupdate', function(e) {
         for (var i = 0, l = lyric.length; i < l; i++) {
             if (this.currentTime > lyric[i][0]) {
                 var prevLine = $("#line-" + (i > 0 ? i - 1 : i) + "");
