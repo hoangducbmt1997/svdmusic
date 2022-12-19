@@ -13,7 +13,7 @@ class Banner extends Model
     //JOIN 1 - n
     public function songs()
     {
-        return $this->hasMany(song::class,'banner_id','id');
+        return $this->hasMany(Song::class,'banner_id','id');
     }
 
     // local scope

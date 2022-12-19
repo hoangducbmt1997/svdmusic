@@ -12,6 +12,6 @@ class ArtistRegistered extends Model
     protected $fillable = ['id','account_id','artist_id','status'];
     public function artist()
     {
-        return $this->hasOne(artist::class,'id','artist_id');
+        return $this->hasOne(Artist::class,'id','artist_id');
     }
 }

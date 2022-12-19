@@ -12,6 +12,6 @@ class Top100Registered extends Model
     protected $fillable = ['id','account_id','top100_id','status'];
     public function top100()
     {
-        return $this->hasOne(top100::class,'id','top100_id');
+        return $this->hasOne(Top100::class,'id','top100_id');
     }
 }

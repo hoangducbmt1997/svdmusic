@@ -17,15 +17,15 @@ class Song extends Model
     }
     public function artist()
     {
-        return $this->hasOne(artist::class,'id','artist_id');
+        return $this->hasOne(Artist::class,'id','artist_id');
     }
     public function area()
     {
-        return $this->hasOne(area::class,'id','area_id');
+        return $this->hasOne(Area::class,'id','area_id');
     }
     public function top100()
     {
-        return $this->hasOne(top100::class,'id','top100_id');
+        return $this->hasOne(Top100::class,'id','top100_id');
     }
 
     // local scope

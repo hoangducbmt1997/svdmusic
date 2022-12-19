@@ -12,11 +12,11 @@ class Area extends Model
     protected $fillable = ['name_area','image_area','slug_area','prioty','status'];
     public function songs()
     {
-        return $this->hasMany(song::class,'area_id','id')->where('status',1);
+        return $this->hasMany(Song::class,'area_id','id')->where('status',1);
     }
     public function artist()
     {
-        return $this->hasOne(artist::class,'id','artist_id');
+        return $this->hasOne(Artist::class,'id','artist_id');
     }
     public function top100s()
     {

@@ -12,11 +12,11 @@ class Playlist extends Model
     protected $fillable = ['name_playlist','image_playlist','image_gif_playlist','status','prioty','song_id','artist_id','account_id','description_playlist'];
     public function artist()
     {
-        return $this->hasOne(artist::class,'id','artist_id');
+        return $this->hasOne(Artist::class,'id','artist_id');
     }
     public function song()
     {
-        return $this->hasOne(song::class,'id','song_id');
+        return $this->hasOne(Song::class,'id','song_id');
     }
     public function scopeSearch($query)
     {
