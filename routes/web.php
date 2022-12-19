@@ -25,7 +25,6 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'namespace' => 'App\Http\Controllers',
     'middleware' => [
-        // registered middleware here
     ],
 ], function () {
     Route::group([
@@ -538,14 +537,5 @@ Route::group([
 
     });
 });
-
-
-
-// // Route action của user
-// Route::prefix('user')->group(function (){
-//     // Đăng kí nghệ sĩ
-
-
-// });
 
 

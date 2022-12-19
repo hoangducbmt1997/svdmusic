@@ -16,7 +16,7 @@
           <label for="">Image banner</label>
           <div>
             <input type="file" name="upload_image" >
-            <img src="{{url('uploads/banner')}}/{{$banner->image_banner}}" width="150" />
+            <img src="{{url('/public/uploads/banner')}}/{{$banner->image_banner}}" width="150" />
           </div>
 
         </div>

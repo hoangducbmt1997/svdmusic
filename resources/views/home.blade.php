@@ -2,7 +2,7 @@
 @extends('layouts.site')
 @section('title', 'Trang chủ')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/index.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-slide">
@@ -21,7 +21,7 @@
                 ?>
                 @foreach ($banner as $item)
                 <label class="card" for="item-{{$countSlide}}" id="song-{{$countSlide++}}">
-                    <img src="{{ url('uploads/banner') }}/{{ $item->image_banner}}" alt="song">
+                    <img src="{{ url('public/uploads/banner') }}/{{ $item->image_banner}}" alt="song">
                 </label>
                 @endforeach
 
@@ -45,8 +45,8 @@
                                         </button>
                                     </div>
                                     <div class="overlay"></div>
-                                    <img onerror="this.src='{{ url('uploads/top100/top100_default.jpg') }}'"
-                                        src="{{ url('uploads/top100') }}/{{ $item->image_top100 }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/top100/top100_default.jpg') }}'"
+                                        src="{{ url('public/uploads/top100') }}/{{ $item->image_top100 }}" />
                                 </div>
                             </div>
                             </a>
@@ -69,8 +69,8 @@
                                         </button>
                                     </div>
                                     <div class="overlay"></div>
-                                    <img onerror="this.src='{{ url('uploads/category/category_default.jpg') }}'"
-                                        src="{{ url('uploads/category') }}/{{ $item->image_category }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/category/category_default.jpg') }}'"
+                                        src="{{ url('public/uploads/category') }}/{{ $item->image_category }}" />
                                 </div>
                             </div>
                         </a>
@@ -118,8 +118,8 @@
                                         <span class="material-icons flex-center">play_arrow</span>
                                         <div class="overlay"></div>
 
-                                        <img height="190" onerror="this.src='{{ url('uploads/banner_song/video_default.jpg') }}'"
-                                            src="{{ url('uploads/banner_song') }}/{{ $item->image_bannersong }}"  />
+                                        <img height="190" onerror="this.src='{{ url('public/uploads/banner_song/video_default.jpg') }}'"
+                                            src="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"  />
                                     </div>
                                     <div class="info-new-song">
                                         <div class="name">{{ $item->name_song }}</div>
@@ -134,12 +134,12 @@
                             <ul class="list-music ">
                                 @foreach ($song as $item)
                                     <li class="list-music-item"
-                                        data-music="{{ url('uploads/mp3') }}/{{ $item->link_mp3 }}"
-                                        data-lrc="{{ url('uploads/lrc') }}/{{ $item->link_lyrics }}"
+                                        data-music="{{ url('public/uploads/mp3') }}/{{ $item->link_mp3 }}"
+                                        data-lrc="{{ url('public/uploads/lrc') }}/{{ $item->link_lyrics }}"
                                         data-name="{{ $item->name_song }}"
                                         data-creator="{{ $item->artist->name_artist }}"
-                                        data-avatar="{{ url('uploads/image_song') }}/{{ $item->image_song }}"
-                                        data-img="{{ url('uploads/banner_song') }}/{{ $item->image_bannersong }}"
+                                        data-avatar="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}"
+                                        data-img="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"
                                         data-index=""
                                         data-id="{{$item->id}}">
 
@@ -152,8 +152,8 @@
                                                         play_arrow
                                                     </span></div>
                                                 <div class="over-lay-item-info"></div>
-                                                <img onerror="this.src='{{ url('uploads/image_song/song_default.jpg') }}'"
-                                                    src="{{ url('uploads/image_song') }}/{{ $item->image_song }}">
+                                                <img onerror="this.src='{{ url('public/uploads/image_song/song_default.jpg') }}'"
+                                                    src="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}">
                                             </div>
                                             <div class="item-info">
                                                 <div class="name">{{ $item->name_song }}</div>
@@ -199,7 +199,7 @@
                             <div class="item">
                                 <a href="{{ route('home.view', ['id' => $item->id, 'slug' => $item->slug_area]) }}">
                                     <div class="wrapper-theme-song-img">
-                                        <img src="{{ url('uploads/area') }}/{{ $item->image_area }}" />
+                                        <img src="{{ url('public/uploads/area') }}/{{ $item->image_area }}" />
                                     </div>
                                 </a>
                             </div>
@@ -216,8 +216,8 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
-                                        src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/artist/avatar_default.jpg') }}'"
+                                        src="{{ url('public/uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>
                             </div>
@@ -236,8 +236,8 @@
                                         <div class="wrapper-mv-song">
                                             <div class="overlay"></div>
                                             <span class="material-icons">play_arrow</span>
-                                            <img onerror="this.src='{{ url('uploads/mv/mv_default.jpg') }}'"
-                                                src="{{ url('uploads/mv') }}/{{ $item->image_mv }}" />
+                                            <img onerror="this.src='{{ url('public/uploads/mv/mv_default.jpg') }}'"
+                                                src="{{ url('public/uploads/mv') }}/{{ $item->image_mv }}" />
                                         </div>
                                         <div class="info-mv-song">
                                             <div class="name">{{ $item->name_mv }}</div>
@@ -254,5 +254,5 @@
 
 @endsection
 @section('js')
-    <script src="{{url('site')}}/js/slide.js"></script>
+    <script src="{{url('/public/site')}}/js/slide.js"></script>
 @endsection

@@ -28,7 +28,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_banner }}</td>
-                    <td><img src="{{url('uploads/banner')}}/{{$item->image_banner}}" width="150" /></td>
+                    <td><img src="{{url('/public/uploads/banner')}}/{{$item->image_banner}}" width="150" /></td>
                     <td>{{ $item->prioty }}</td>
                     <td>
                         @if ($item->status == 0)

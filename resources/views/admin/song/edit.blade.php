@@ -17,14 +17,14 @@
           <label for="">Image Song</label>
           <div>
             <input type="file" name="upload_image" />
-            <img src="{{url('uploads/image_song')}}/{{$song->image_song}}" width="50" />
+            <img src="{{url('public/uploads/image_song')}}/{{$song->image_song}}" width="50" />
           </div>
         </div>
         <div class="form-group">
           <label for="">Image Banner Song</label>
           <div>
             <input type="file" name="upload_imagebanner" >
-            <img src="{{url('uploads/banner_song')}}/{{$song->image_bannersong}}" width="100" />
+            <img src="{{url('public/uploads/banner_song')}}/{{$song->image_bannersong}}" width="100" />
           </div>
           @error('upload_imagebanner')
           <small id="helpId" class="text-muted">{{$message}}</small>

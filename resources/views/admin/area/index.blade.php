@@ -28,7 +28,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_area }}</td>
-                    <td><img src="{{url('uploads/area')}}/{{$item->image_area}}" width="100" /></td>
+                    <td><img src="{{url('/public/uploads/area')}}/{{$item->image_area}}" width="100" /></td>
                     <td>{{ $item->songs ? $item->songs->count() : 0 }}</td>
                     <td>
                         @if ($item->status == 0)

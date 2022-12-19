@@ -27,7 +27,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_mv }}</td>
-                    <td><img src="{{url('uploads/mv')}}/{{$item->image_mv}}" width="100" /></td>
+                    <td><img src="{{url('/public/uploads/mv')}}/{{$item->image_mv}}" width="100" /></td>
                     <td>{{ $item->name_artist }}</td>
                     <td>
                         @if ($item->status == 0)

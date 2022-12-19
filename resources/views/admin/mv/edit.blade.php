@@ -18,7 +18,7 @@
                     <label for="">Image MV</label>
                     <div>
                         <input type="file" name="upload_image">
-                        <img src="{{ url('uploads/mv') }}/{{ $mv->image_mv }}" width="100" />
+                        <img src="{{ url('/public/uploads/mv') }}/{{ $mv->image_mv }}" width="100" />
                     </div>
                 </div>
                 <div class="form-group">

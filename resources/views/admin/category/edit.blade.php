@@ -16,14 +16,14 @@
           <label for="">Image Category</label>
           <div>
             <input type="file" name="upload_image" >
-            <img src="{{url('uploads/category')}}/{{$category->image_category}}" width="50" />
+            <img src="{{url('/public/uploads/category')}}/{{$category->image_category}}" width="50" />
           </div>
         </div>
         <div class="form-group">
             <label for="">Image Gif Category</label>
             <div>
               <input type="file"  name="upload_image_gif">
-            <img src="{{url('uploads/category')}}/{{$category->image_gif_category}}" width="50" />
+            <img src="{{url('/public/uploads/category')}}/{{$category->image_gif_category}}" width="50" />
 
             </div>
             @error('upload_image_gif')

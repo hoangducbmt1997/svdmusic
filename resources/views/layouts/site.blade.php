@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> @yield('title')</title>
     <!--===============================================================================================-->
-    <link rel="shortcut icon" type="image/png" href="{{ url('site') }}/image/Logo-mini.png" />
+    <link rel="shortcut icon" type="image/png" href="{{ url('public/site') }}/image/Logo-mini.png" />
     <!--===============================================================================================-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
@@ -17,11 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600&display=swap"
         rel="stylesheet">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/style.css" />
     <!--===============================================================================================-->
     @yield('css')
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/responsive.css" />
     <!--===============================================================================================-->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -29,9 +29,9 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/animsition.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/animsition.min.css" />
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/jquery.js"></script>
+    <script src="{{ url('public/site') }}/js/jquery.js"></script>
     <!--===============================================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!--===============================================================================================-->
@@ -134,11 +134,11 @@
         <div class="ms-nav-bar" id="nav-bar">
             <div id="logo" class="ms-logo">
                 <a href="{{ route('home.index') }}">
-                    <img class="logo-desktop" src="{{ url('site') }}/image/Logo.png" width="150" />
+                    <img class="logo-desktop" src="{{ url('public/site') }}/image/Logo.png" width="150" />
                 </a>
-                <img class="logo-mobile" src="{{ url('site') }}/image/Logo-mini.png" width="50"
+                <img class="logo-mobile" src="{{ url('public/site') }}/image/Logo-mini.png" width="50"
                     height="50" />
-                <img class="logo-tablet" src="{{ url('site') }}/image/Logo-mini.png" width="50"
+                <img class="logo-tablet" src="{{ url('public/site') }}/image/Logo-mini.png" width="50"
                     height="50" />
                 <div id="close-id" class="close-logo ">
                     <span class="material-icons-outlined">close</span>
@@ -248,7 +248,7 @@
                                 <a id="signInHeader" href="{{ route('customer.logout') }}" class="btn login-trigger"
                                     data-toggle="modal">Đăng Xuất</a>
                                 <a href="{{ route('customer.profile') }}">
-                                    <img class="user-image" src="{{ url('site') }}/image/default.jpg" />
+                                    <img class="user-image" src="{{ url('public/site') }}/image/default.jpg" />
                                 </a>
                             </div>
                         @else
@@ -330,16 +330,16 @@
                         <div class="wrapper-icon-footer footer-item">
                             <ul>
                                 <li>
-                                    <img src="{{ url('site') }}/image/t_ic_facebook.png" width="25px" />
+                                    <img src="{{ url('public/site') }}/image/t_ic_facebook.png" width="25px" />
                                 </li>
                                 <li>
-                                    <img src="{{ url('site') }}/image/t_ic_instagram.png" width="25px" />
+                                    <img src="{{ url('public/site') }}/image/t_ic_instagram.png" width="25px" />
                                 </li>
                                 <li>
-                                    <img src="{{ url('site') }}/image/t_ic_tiktok.png" width="25px" />
+                                    <img src="{{ url('public/site') }}/image/t_ic_tiktok.png" width="25px" />
                                 </li>
                                 <li>
-                                    <img src="{{ url('site') }}/image/t_ic_twitter.png" width="25px" />
+                                    <img src="{{ url('public/site') }}/image/t_ic_twitter.png" width="25px" />
                                 </li>
                             </ul>
                         </div>
@@ -358,15 +358,15 @@
 
 
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/control.js"></script>
+    <script src="{{ url('public/site') }}/js/control.js"></script>
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/app.js"></script>
+    <script src="{{ url('public/site') }}/js/app.js"></script>
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/jquery-3.2.1.min.js"></script>
+    <script src="{{ url('public/site') }}/js/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/animsition.min.js"></script>
+    <script src="{{ url('public/site') }}/js/animsition.min.js"></script>
     <!--===============================================================================================-->
-    <script src="{{ url('site') }}/js/loading.js"></script>
+    <script src="{{ url('public/site') }}/js/loading.js"></script>
 
     <script>
         $('.search-ajax-result').hide();

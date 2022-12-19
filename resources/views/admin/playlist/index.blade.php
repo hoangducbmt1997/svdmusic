@@ -30,7 +30,7 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_playlist }}</td>
                     <td>{{ $item->songs ? $item->songs->count() : 0 }} </td>
-                    <td><img onerror="this.src='{{url('uploads/playlist/playlist_default.jpg')}}'" src="{{url('uploads/playlist')}}/{{$item->image_playlist}}" width="50" /></td>
+                    <td><img onerror="this.src='{{url('public/uploads/playlist/playlist_default.jpg')}}'" src="{{url('public/uploads/playlist')}}/{{$item->image_playlist}}" width="50" /></td>
                     <td ><div class="description-artist">{{ $item->description_playlist ? $item->description_playlist : 'Chưa cập nhật' }}</div></td>
                     <td>
                         @if ($item->status == 0)

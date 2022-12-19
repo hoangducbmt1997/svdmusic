@@ -47,8 +47,8 @@
                             </div>
                             <div class="wrapper-suggesstion">
                                 <span class="material-icons flex-center">play_arrow</span>
-                                <div class="overlay"></div>                                
-                                <img onerror="this.src='{{ url('public/uploads/banner_song/video_default.jpg') }}'"
+                                <div class="overlay"></div>
+                                <img onerror="this.src='{{ url('/public/uploads/banner_song/video_default.jpg;') }}'"
                                     src="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}" />
                             </div>
                             <div class="info-new-song">
@@ -80,7 +80,7 @@
                                                 play_arrow
                                             </span></div>
                                         <div class="over-lay-item-info"></div>
-                                        <img onerror="this.src='{{ url('public/uploads/image_song/song_default.jpg') }}'"
+                                        <img onerror="this.src='{{ url('/public/uploads/image_song/song_default.jpg;') }}'"
                                             src="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}">
                                     </div>
                                     <div class="item-info">

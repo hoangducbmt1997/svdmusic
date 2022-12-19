@@ -43,7 +43,7 @@
         <div class="wrapper-ms-artist-banner">
             <div class="ms-artist-info ">
                 <div class="wrapper-artist-info">
-                    <img class="avatar-artist" onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'" src="{{ url('uploads/artist') }}/{{ $artist->image_artist }}" />
+                    <img class="avatar-artist" onerror="this.src='{{ url('/uploads/artist/avatar_default.jpg') }}'" src="{{ url('uploads/artist') }}/{{ $artist->image_artist }}" />
                     <div class="ms-artist-profile">
                         <p class="title-suggesstion ">{{$artist->name_artist}}</p>
                         <p class="artist-story">{{$artist->description_artist ? $artist->description_artist : 'Thông tin: Đang cập nhật'}} ...</p>
@@ -102,7 +102,7 @@
                                                 play_arrow
                                             </span></div>
                                         <div class="over-lay-item-info"></div>
-                                        <img onerror="this.src='{{ url('uploads/image_song/song_default.jpg') }}'"
+                                        <img onerror="this.src='{{ url('/uploads/image_song/song_default.jpg') }}'"
                                             src="{{ url('uploads/image_song') }}/{{ $item->image_song }}">
                                     </div>
                                     <div class="item-info">
@@ -262,7 +262,7 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
+                                    <img onerror="this.src='{{ url('/uploads/artist/avatar_default.jpg;') }}'"
                                         src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>

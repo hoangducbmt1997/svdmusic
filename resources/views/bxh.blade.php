@@ -1,14 +1,14 @@
 @extends('layouts.site')
 @section('title', 'Bảng xếp hạng')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/rank-song.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/rank-song.css" />
 @endsection
 @section('main')
 <div class="ms-wrapper-mobile">
                 <div class="ms-ranking-song">
                     <div class="blur-song-bg"></div>
                     <div class="blur-song-bg-1"></div>
-                    <img class="ms-ranking-bg" src="{{url('site/image')}}/banner-bxh.gif" />
+                    <img class="ms-ranking-bg" src="{{url('/public/site/image')}}/banner-bxh.gif" />
                     <h1 class="title-ranking-song text-title"># BẢNG XẾP HẠNG</h1>
                 </div>
                 <div class="ms-song-lyrics hidden">
@@ -50,8 +50,8 @@
                                         <span class="material-icons flex-center">play_arrow</span>
                                         <div class="overlay"></div>
 
-                                        <img height="190" onerror="this.src='{{ url('uploads/banner_song/video_default.jpg') }}'"
-                                            src="{{ url('uploads/banner_song') }}/{{ $item->image_bannersong }}"  />
+                                        <img height="190" onerror="this.src='{{ url('public/uploads/banner_song/video_default.jpg') }}'"
+                                            src="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"  />
                                     </div>
                                     <div class="info-new-song">
                                         <div class="name">{{ $item->name_song }}</div>
@@ -67,12 +67,12 @@
                             <ul class="list-music ">
                                 @foreach ($song as $item)
                                     <li class="list-music-item"
-                                        data-music="{{ url('uploads/mp3') }}/{{ $item->link_mp3 }}"
-                                        data-lrc="{{ url('uploads/lrc') }}/{{ $item->link_lyrics }}"
+                                        data-music="{{ url('public/uploads/mp3') }}/{{ $item->link_mp3 }}"
+                                        data-lrc="{{ url('public/uploads/lrc') }}/{{ $item->link_lyrics }}"
                                         data-name="{{ $item->name_song }}"
                                         data-creator="{{ $item->artist->name_artist }}"
-                                        data-avatar="{{ url('uploads/image_song') }}/{{ $item->image_song }}"
-                                        data-img="{{ url('uploads/banner_song') }}/{{ $item->image_bannersong }}"
+                                        data-avatar="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}"
+                                        data-img="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"
                                         data-index=""
                                         data-id="{{$item->id}}">
                                         <div class="equalizer-and-number">
@@ -84,8 +84,8 @@
                                                         play_arrow
                                                     </span></div>
                                                 <div class="over-lay-item-info"></div>
-                                                <img onerror="this.src='{{ url('uploads/image_song/song_default.jpg') }}'"
-                                                    src="{{ url('uploads/image_song') }}/{{ $item->image_song }}">
+                                                <img onerror="this.src='{{ url('public/uploads/image_song/song_default.jpg') }}'"
+                                                    src="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}">
                                             </div>
                                             <div class="item-info">
                                                 <div class="name">{{ $item->name_song }}</div>
@@ -129,8 +129,8 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
-                                        src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/artist/avatar_default.jpg') }}'"
+                                        src="{{ url('public/uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>
                             </div>

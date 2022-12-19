@@ -265,7 +265,7 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
+                                    <img onerror="this.src='{{url('/uploads/artist/avatar_default.jpg')}}'"
                                         src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>

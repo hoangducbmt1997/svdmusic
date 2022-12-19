@@ -1,14 +1,14 @@
 @extends('layouts.site')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/top100.css" />
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/rank-song.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/top100.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/rank-song.css" />
 @endsection
 @section('main')
 <div class="ms-wrapper-mobile">
             <div class="ms-ranking-song">
                 <div class="blur-song-bg blur-100-song"></div>
                 <div class="blur-song-bg-1"></div>
-                <img class="ms-ranking-bg ms-100-song-bg" src="{{ url('site') }}/image/banner-3.gif"  />
+                <img class="ms-ranking-bg ms-100-song-bg" src="{{ url('public/site') }}/image/banner-3.gif"  />
                 <h1 class="title-ranking-song text-title"># TOP 100 BÀI HÁT</h1>
             </div>
             <div class="ms-wrapper-content-song ms-content-mobile ms-list-ranking-song">
@@ -32,7 +32,7 @@
                                     </button>
                                 </div>
                                 <div class="overlay"></div>
-                                <img onerror="this.src='{{url('uploads/top100/top100_default.jpg')}}'" src="{{ url('uploads/top100') }}/{{ $item->image_top100 }}" />
+                                <img onerror="this.src='{{url('public/uploads/top100/top100_default.jpg')}}'" src="{{ url('public/uploads/top100') }}/{{ $item->image_top100 }}" />
                             </div>
                         </div>
                         </a>

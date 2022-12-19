@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', $category->name_category)
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/artist.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/artist.css" />
 @endsection
 @section('main')
 <div class="ms-wrapper-mobile">
@@ -38,12 +38,12 @@
         <div class="ms-artist-bg">
             <div class="blur-song-bg"></div>
             <div class="blur-song-bg-1"></div>
-            <img class="artist-profile-bg" src="{{ url('site') }}/image/banner-category.gif" />
+            <img class="artist-profile-bg" src="{{ url('public/site') }}/image/banner-category.gif" />
         </div>
         <div class="wrapper-ms-artist-banner">
             <div class="ms-artist-info ">
                 <div class="wrapper-artist-info">
-                    <img class="avatar-artist" onerror="this.src='{{ url('uploads/category/category_default.jpg') }}'" src="{{ url('uploads/category') }}/{{ $category->image_gif_category }}" />
+                    <img class="avatar-artist" onerror="this.src='{{ url('public/uploads/category/category_default.jpg') }}'" src="{{ url('public/uploads/category') }}/{{ $category->image_gif_category }}" />
                     <div class="ms-artist-profile">
                         <p class="title-suggesstion ">{{$category->name_artist}}</p>
                         <p class="artist-story">Thông tin: Đang cập nhật</p>
@@ -88,11 +88,11 @@
                         <ul class="list-music list-music-artist">
                             @foreach ($song as $item)
                             <li class="list-music-item"
-                                data-music="{{ url('uploads/mp3') }}/{{ $item->link_mp3 }}"
-                                data-lrc="{{ url('uploads/lrc') }}/{{ $item->link_lyrics }}"
+                                data-music="{{ url('public/uploads/mp3') }}/{{ $item->link_mp3 }}"
+                                data-lrc="{{ url('public/uploads/lrc') }}/{{ $item->link_lyrics }}"
                                 data-name="{{ $item->name_song }}" data-creator="{{ $item->artist->name_artist }}"
-                                data-avatar="{{ url('uploads/image_song') }}/{{ $item->image_song }}"
-                                data-img="{{ url('uploads/banner_song') }}/{{ $item->image_bannersong }}"
+                                data-avatar="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}"
+                                data-img="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"
                                 data-index=""
                                 data-id="{{$item->id}}">
                                 <div class="equalizer-and-number">
@@ -104,8 +104,8 @@
                                                 play_arrow
                                             </span></div>
                                         <div class="over-lay-item-info"></div>
-                                        <img onerror="this.src='{{ url('uploads/image_song/song_default.jpg') }}'"
-                                            src="{{ url('uploads/image_song') }}/{{ $item->image_song }}">
+                                        <img onerror="this.src='{{ url('public/uploads/image_song/song_default.jpg') }}'"
+                                            src="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}">
                                     </div>
                                     <div class="item-info">
                                         <div class="name">{{ $item->name_song }}</div>
@@ -127,7 +127,7 @@
                                                     ?>
                                                 @endif
                                             @endforeach
-                                        <a href="{{route('addSong',['id'=>$item->id])}}">
+                                        <a href="{{route('home.addSong',['id'=>$item->id])}}">
 
                                         <span class=" add-playlist material-icons-outlined">
                                             {{$check}}
@@ -215,7 +215,7 @@
                                 </button>
                             </div>
                             <div class="overlay"></div>
-                            <img src="{{ url('site') }}/image/hit-quoc-dan.jpg" />
+                            <img src="{{ url('public/site') }}/image/hit-quoc-dan.jpg" />
                         </div>
                     </div>
 

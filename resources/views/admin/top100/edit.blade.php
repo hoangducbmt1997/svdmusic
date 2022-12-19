@@ -19,14 +19,14 @@
                     <label for="">Image Top100</label>
                     <div>
                         <input type="file" name="upload_image">
-                        <img onerror="this.src='{{url('uploads/top100/top100_default.jpg')}}'" src="{{ url('uploads/top100') }}/{{ $top100->image_top100 }}" width="50" />
+                        <img onerror="this.src='{{url('public/uploads/top100/top100_default.jpg')}}'" src="{{ url('uploads/top100') }}/{{ $top100->image_top100 }}" width="50" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Image Gif Top100</label>
                     <div>
                       <input type="file"  name="upload_image_gif">
-                      <img onerror="this.src='{{url('uploads/top100/top100_default.jpg')}}'" src="{{ url('uploads/top100') }}/{{ $top100->image_gif_top100 }}" width="50" />
+                      <img onerror="this.src='{{url('public/uploads/top100/top100_default.jpg')}}'" src="{{ url('uploads/top100') }}/{{ $top100->image_gif_top100 }}" width="50" />
 
                     </div>
                     @error('upload_image_gif')

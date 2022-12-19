@@ -8,14 +8,14 @@ $menu = config('menu');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin - @yield('title')</title>
     <!-- Font Awesome -->
-    <link rel="shortcut icon" type="image/png" href="{{ url('site') }}/image/Logo-mini.png" />
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="{{ url('public/site') }}/image/Logo-mini.png" />
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/dist/css/adminlte.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/dist/css/style.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/dist/css/style.css">
 
 </head>
 
@@ -61,7 +61,7 @@ $menu = config('menu');
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="{{ route('admin.LoginController.dashboard') }}" class="brand-link">
-                <img src="{{ url('siteadmin') }}/dist/img/Logo-mini.png" alt="SVD Music"
+                <img src="{{ url('public/siteadmin') }}/dist/img/Logo-mini.png" alt="SVD Music"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text text-admin-dashboard ">Admin </span>
                 <span class="brand-text text-admin-dashboard text-admin-2 ">Dashboard</span>
@@ -74,12 +74,12 @@ $menu = config('menu');
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                     @if(Auth::check())
-                    <img onerror="this.src='{{url('uploads/user/avatar_default.jpg')}}'"
-                        src="{{url('uploads/user').'/'}}{{Auth::user()->image_user}}"
+                    <img onerror="this.src='{{url('public/uploads/user/avatar_default.jpg')}}'"
+                        src="{{url('public/uploads/user').'/'}}{{Auth::user()->image_user}}"
                             class="img-circle elevation-2" alt="User Image">
                     @else
-                    <img onerror="this.src='{{url('uploads/user/avatar_default.jpg')}}'"
-                        src="{{url('uploads/user').'/'}}"
+                    <img onerror="this.src='{{url('public/uploads/user/avatar_default.jpg')}}'"
+                        src="{{url('public/uploads/user').'/'}}"
                             class="img-circle elevation-2" alt="User Image">
                     @endif
                     </div>
@@ -172,13 +172,13 @@ $menu = config('menu');
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="{{ url('siteadmin') }}/plugins/jquery/jquery.min.js"></script>
+    <script src="{{ url('public/siteadmin') }}/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{ url('siteadmin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url('public/siteadmin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- overlayScrollbars -->
-    <script src="{{ url('siteadmin') }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="{{ url('public/siteadmin') }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="{{ url('siteadmin') }}/dist/js/adminlte.min.js"></script>
+    <script src="{{ url('public/siteadmin') }}/dist/js/adminlte.min.js"></script>
     @yield('css')
     @yield('js')
 </body>

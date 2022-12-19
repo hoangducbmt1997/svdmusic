@@ -27,7 +27,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_theme }}</td>
-                    <td><img src="{{url('uploads/theme')}}/{{$item->image_theme}}" width="100" /></td>
+                    <td><img src="{{url('public/uploads/theme')}}/{{$item->image_theme}}" width="100" /></td>
                     <td>
                         @if ($item->status == 0)
                             <span class="badge badge-danger">Private</span>

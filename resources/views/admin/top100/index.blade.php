@@ -30,7 +30,7 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_top100 }}</td>
 
-                    <td><img onerror="this.src='{{url('uploads/top100/top100_default.jpg')}}'" src="{{url('uploads/top100')}}/{{$item->image_top100}}" width="50" /></td>
+                    <td><img onerror="this.src='{{url('public/uploads/top100/top100_default.jpg')}}'" src="{{url('public/uploads/top100')}}/{{$item->image_top100}}" width="50" /></td>
                     <td>{{ isset($item->area->name_area) ? $item->area->name_area : ''  }}</td>
                     <td>{{ $item->songs ? $item->songs->count() : 0 }} </td>
                     <td>

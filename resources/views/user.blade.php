@@ -1,6 +1,6 @@
 @extends('layouts.site')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/user.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/user.css" />
 @endsection
 @section('main')
 <div class="ms-wrapper-mobile">
@@ -38,13 +38,13 @@
     <div class="ms-user-profile-bg">
         <div class="blur-song-bg"></div>
         <div class="blur-song-bg-1"></div>
-        <img class="user-profile-bg" src="{{ url('site') }}/image/banner-user.gif" />
+        <img class="user-profile-bg" src="{{ url('public/site') }}/image/banner-user.gif" />
     </div>
     <div class="wrapper-user-profile ">
         <div class="container-user-profile ">
             <div class="user-profile-avatar"
 
-                <img class="profile-avatar" onerror="this.src='{{url('uploads/user/avatar_default.jpg')}}'" src=""/>
+                <img class="profile-avatar" onerror="this.src='{{url('public/uploads/user/avatar_default.jpg')}}'" src=""/>
                 <div class="user-profile-info">
                     <p class="title-suggesstion name-user">{{Auth::guard('customer')->user()->name}}</p>
                     <p class="user-info">Thông tin cá nhân: </p>
@@ -66,12 +66,12 @@
                     <ul class="list-song-user list-music">
                         @foreach($cart->items as $item)
                         <li class="list-music-item"
-                            data-music="{{url('uploads/mp3') }}/{{$item['mp3']}}"
-                            data-lrc="{{ url('uploads/lrc') }}/{{ $item['lrc'] }}"
+                            data-music="{{url('public/uploads/mp3') }}/{{$item['mp3']}}"
+                            data-lrc="{{ url('public/uploads/lrc') }}/{{ $item['lrc'] }}"
                             data-name="{{ $item['name']}}"
                             data-creator="{{ $item['artist'] }}"
-                            data-avatar="{{ url('uploads/image_song') }}/{{ $item['avatar'] }}"
-                            data-img="{{ url('uploads/banner_song') }}/{{ $item['banner'] }}"
+                            data-avatar="{{ url('public/uploads/image_song') }}/{{ $item['avatar'] }}"
+                            data-img="{{ url('public/uploads/banner_song') }}/{{ $item['banner'] }}"
                             data-index="">
                             <div class="equalizer-and-number">
                                 <p class="number-item">01</p>
@@ -82,7 +82,7 @@
                                             play_arrow
                                         </span></div>
                                     <div class="over-lay-item-info"></div>
-                                    <img  onerror="this.src='{{url('uploads/image_song/song_default.jpg')}}'" src="{{ url('uploads/image_song') }}/{{$item['image']}}">
+                                    <img  onerror="this.src='{{url('public/uploads/image_song/song_default.jpg')}}'" src="{{ url('public/uploads/image_song') }}/{{$item['image']}}">
                                 </div>
                                 <div class="item-info">
                                     <div class="name">{{$item['name']}}</div>
@@ -119,7 +119,7 @@
                 <!--
                 <div class="item">
                     <div class="playlist-user-item-avatar">
-                        <img src="{{ url('site') }}/image/edm_playlist.png" />
+                        <img src="{{ url('public/site') }}/image/edm_playlist.png" />
                     </div>
                     <div class="playlist-user-item-info playlist-user-item-add flex-center">
 
@@ -134,7 +134,7 @@
                 <a href="{{ route('view.top100', ['id' => $item->top100->id]) }}">
                 <div class="item">
                     <div class="playlist-user-item-avatar">
-                        <img src="{{ url('uploads') }}/top100/{{$item->top100->image_top100}}" />
+                        <img src="{{ url('public/uploads') }}/top100/{{$item->top100->image_top100}}" />
                     </div>
                     <div class="playlist-user-item-info">
                         <p class="name-playlist">{{$item->top100->name_top100}}</p>
@@ -148,7 +148,7 @@
                 <a href="{{ route('view.category', ['id' => $item->category->id]) }}">
                 <div class="item">
                     <div class="playlist-user-item-avatar">
-                        <img src="{{ url('uploads') }}/category/{{$item->category->image_category}}" />
+                        <img src="{{ url('public/uploads') }}/category/{{$item->category->image_category}}" />
                     </div>
                     <div class="playlist-user-item-info">
                         <p class="name-playlist">{{$item->category->name_category}}</p>
@@ -176,7 +176,7 @@
                         <div class="overlay"></div>
                         <span class="material-icons">play_arrow</span>
                         <img
-                            src="{{url('uploads/artist')}}/{{$item->artist->image_artist}}" />
+                            src="{{url('public/uploads/artist')}}/{{$item->artist->image_artist}}" />
 
                     </div>
                     <div class="name-artist">{{$item->artist->name_artist}}</div>
