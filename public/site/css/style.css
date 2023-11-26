@@ -188,6 +188,7 @@ body {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
+
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 0;
@@ -211,9 +212,11 @@ body {
 .login-mobile {
     display: none;
 }
-.item-control a{
+
+.item-control a {
     color: (var(--gray-color));
 }
+
 /*--NAV BAR--*/
 
 .ms-nav-bar {
@@ -284,41 +287,46 @@ body {
 .is-active .material-icons-outlined {
     color: var(--green-color);
 }
+
 .active-song-play {
-	color: #fff;
-	position: relative;
+    color: #fff;
+    position: relative;
 }
-.active-song-play::before{
+
+.active-song-play::before {
     content: '';
-	background-image: url(../image/icon-playing.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 40%;
-	background-color: rgba(0, 0, 0, .4);
-	width: 50px;
-	height: 50px;
-	position: absolute;
-	z-index: 1;
-	margin-left: 35px;
+    background-image: url(../image/icon-playing.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    background-color: rgba(0, 0, 0, .4);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 35px;
 }
-.close-logo{
+
+.close-logo {
     display: none;
     position: absolute;
     height: 75px;
     width: 75px;
     right: 0;
 }
-.close-logo span{
+
+.close-logo span {
     margin-left: 15px;
     margin-top: 16px;
     font-size: 2rem;
     color: var(--light-gray-color) !important;
     cursor: pointer;
-    padding: 3px!important;
+    padding: 3px !important;
     border: 2px solid #01eec0;
     border-radius: 50%;
     top: 50%;
 }
+
 .ms-nav-bar .material-icons-outlined {
     padding-left: 20px;
 }
@@ -349,6 +357,7 @@ body {
     text-align: center;
     background-image: linear-gradient(to right, #3c8297 0%, #1bddc3 100%);
 }
+
 .suggesstion-login p {
     color: var(--white-color);
     font-size: 0.9rem;
@@ -364,10 +373,12 @@ body {
     transition: 0.2s;
     margin: 10px auto;
 }
+
 .suggesstion-login .btn:hover {
     opacity: 1;
 }
-.alert-song{
+
+.alert-song {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,24 +386,27 @@ body {
     font-weight: bold;
     height: 100%;
 }
+
 .animsition-loading {
     background-color: transparent;
-    border-top: 5px solid rgba(0,0,0,.2);
-    border-right: 5px solid rgba(0,0,0,.2);
-    border-bottom: 5px solid rgba(0,0,0,.2);
+    border-top: 5px solid rgba(0, 0, 0, .2);
+    border-right: 5px solid rgba(0, 0, 0, .2);
+    border-bottom: 5px solid rgba(0, 0, 0, .2);
     border-left: 5px solid rgb(0, 196, 147) !important;
     width: 50px !important;
     height: 50px !important;
 }
+
 /*-----------Toast Message--------*/
 
-#toast{
+#toast {
     position: absolute;
-    top:100px;
+    top: 100px;
     right: 32px;
     z-index: 1000;
 }
-.toast{
+
+.toast {
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -400,62 +414,69 @@ body {
     min-width: 400px;
     max-width: 450px;
     border: 2px;
-    border-left: 5px solid ;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.08) ;
-    animation: slideInLeft ease .5s,fadeOut linear 1s 5s forwards;
+    border-left: 5px solid;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInLeft ease .5s, fadeOut linear 1s 5s forwards;
 }
+
 @keyframes slideInLeft {
-    from{
+    from {
         opacity: 0;
         transform: translateX(calc(100% + 32px));
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0);
 
     }
 }
+
 @keyframes fadeOut {
 
-    to{
+    to {
         opacity: 0;
 
     }
 }
-.toast__icon{
+
+.toast__icon {
     font-size: 20px;
 }
 
-.toast__body{
+.toast__body {
     flex-grow: 1;
 }
 
-.toast__title{
+.toast__title {
     font-size: 16px;
 }
 
-.toast--success{
+.toast--success {
     border-color: var(--green-btn-color);
 }
-.toast--success .toast__icon{
+
+.toast--success .toast__icon {
     color: var(--green-btn-color);
 }
-.toast__icon,.toast__close{
+
+.toast__icon, .toast__close {
     padding: 0 16px;
 }
 
 
-.toast__message{
+.toast__message {
     font-size: 14px;
     margin-top: 4px;
     color: #888;
 }
 
-.toast__close{
+.toast__close {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
+
 /*-----------Header-----------------------*/
 
 .ms-wrapper-header {
@@ -472,7 +493,7 @@ body {
     width: 90%;
     display: flex;
     padding-top: 20px;
-    
+
 }
 
 .search-container {
@@ -491,31 +512,37 @@ body {
     text-align: center;
     cursor: pointer;
 }
-.search-ajax-result{
+
+.search-ajax-result {
     background-color: var(--blue-color);
     margin-top: 20px;
-    
+
 }
-.search-ajax-result .media-body{
+
+.search-ajax-result .media-body {
     color: white;
     display: flex;
 
 }
-.search-ajax-result .media-body h5{
+
+.search-ajax-result .media-body h5 {
     padding-left: 10px;
     font-weight: 500;
 }
-.search-ajax-result .media{
+
+.search-ajax-result .media {
     padding: 5px;
     transition: ease-in-out .2s;
 }
-.media a{
+
+.media a {
     display: flex;
     padding: 5px;
     color: var(--gray-color);
     font-size: 1rem;
 }
-.media:hover{
+
+.media:hover {
     background-color: var(--green-btn-color);
 }
 
@@ -571,9 +598,11 @@ body {
     justify-content: space-between;
     display: flex;
 }
-.wrapper-header-control a{
+
+.wrapper-header-control a {
     margin-left: 15px;
 }
+
 .login-trigger {
     text-decoration: none;
     height: 30px;
@@ -1058,9 +1087,11 @@ input[type=radio] {
     0% {
         height: 15px
     }
+
     50% {
         height: 10px
     }
+
     100% {
         height: 15px
     }
@@ -1070,9 +1101,11 @@ input[type=radio] {
     0% {
         height: 15px
     }
+
     50% {
         height: 10px
     }
+
     100% {
         height: 15px
     }
@@ -1082,9 +1115,11 @@ input[type=radio] {
     0% {
         height: 20px
     }
+
     50% {
         height: 13px
     }
+
     100% {
         height: 20px
     }
@@ -1094,9 +1129,11 @@ input[type=radio] {
     0% {
         height: 20px
     }
+
     50% {
         height: 13px
     }
+
     100% {
         height: 20px
     }
@@ -1147,9 +1184,11 @@ input[type=radio] {
 .carousel-new-song {
     padding-bottom: 10px;
 }
+
 .owl-carousel .owl-item img {
     height: 100%;
 }
+
 .carousel-new-song .number-new-song {
     position: absolute;
     top: -15px;
@@ -1162,18 +1201,24 @@ input[type=radio] {
 }
 
 .carousel-new-song .number-rank-song {
-    background: #12c2e9;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 5px  10px 5px 10px;
+    background: #12c2e9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 5px 10px 5px 10px;
     width: 70px;
 }
+
 .carousel-new-song .number-1 {
     text-shadow: 2px 2px rgb(141, 63, 0);
 }
+
 .carousel-new-song .number-2 {
     text-shadow: 2px 2px rgb(87, 52, 243);
 }
+
 .carousel-new-song .number-3 {
     text-shadow: 2px 2px rgb(0, 139, 58);
 }
@@ -1695,4 +1740,32 @@ input[type=radio] {
 
 .wrapper-privacy {
     text-align: center;
+}
+
+.slider {
+    flex-grow: 1;
+    background-color: #D8D8D8;
+    cursor: pointer;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.slider .progress {
+    background-color: #44BFA3;
+    border-radius: inherit;
+    position: absolute;
+    pointer-events: none;
+}
+
+.slider .progress .pin {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #44BFA3;
+    position: absolute;
+    pointer-events: all;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
 }

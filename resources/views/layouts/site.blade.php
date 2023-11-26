@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> @yield('title')</title>
     <!--===============================================================================================-->
     <link rel="shortcut icon" type="image/png" href="{{ url('site') }}/image/Logo-mini.png" />
@@ -98,7 +99,7 @@
                 <div class="ms-player-progress-bar">
                     <div class="wrapper-proggress-bar">
                         <div class=" time current-time">00:00</div>
-                        <input class="progress-bar" value="0" step="1" min="0" max="100"
+                        <input class="progress-bar" value="0" step="0.1" min="0" max="100"
                             type="range" />
                         <div class="time duration-time"></div>
                     </div>

@@ -30,7 +30,7 @@
                         <div class="wrapper-title-lyrics">
                             <p class="title-suggesstion">Lời bài hát :</p>
                         </div>
-                        <div id="abc" class="lyricwrap">
+                        <div class="lyric-wrap">
                             <div class="lyric"></div>
                         </div>
                     </div>
@@ -43,11 +43,11 @@
                     <li class="list-music-top" data-index="">
                         <div class="item ">
                             <div class="number-new-song">
-                            <h2 class="number-rank-song"></h2>
+                                <h2 class="number-rank-song"></h2>
                             </div>
                             <div class="wrapper-suggesstion">
                                 <span class="material-icons flex-center">play_arrow</span>
-                                <div class="overlay"></div>                                
+                                <div class="overlay"></div>
                                 <img onerror="this.src='{{ url('public/uploads/banner_song/video_default.jpg') }}'"
                                     src="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}" />
                             </div>
@@ -63,14 +63,12 @@
                 <div class="wrap-list-song">
                     <ul class="list-music list-music-ranking">
                         @foreach ($model->songs as $item)
-                            <li class="list-music-item"
-                                data-music="{{ url('public/uploads/mp3') }}/{{ $item->link_mp3 }}"
+                            <li class="list-music-item" data-music="{{ url('public/uploads/mp3') }}/{{ $item->link_mp3 }}"
                                 data-lrc="{{ url('public/uploads/lrc') }}/{{ $item->link_lyrics }}"
                                 data-name="{{ $item->name_song }}" data-creator="{{ $item->artist->name_artist }}"
                                 data-avatar="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}"
                                 data-img="{{ url('public/uploads/banner_song') }}/{{ $item->image_bannersong }}"
-                                data-index=""
-                                data-id="{{$item->id}}">
+                                data-index="" data-id="{{ $item->id }}">
                                 <div class="equalizer-and-number">
                                     <p class="number-item"></p>
                                 </div>
@@ -89,25 +87,25 @@
                                     </div>
                                     <div class="item-control">
                                         <a href="{{ route('view.song', ['id' => $item->id]) }}">
-                                        <span class="play-lyrics material-icons-outlined">
-                                        mic_none
-                                        </span>
+                                            <span class="play-lyrics material-icons-outlined">
+                                                mic_none
+                                            </span>
                                         </a>
                                         <?php
                                         $check = 'playlist_add';
                                         ?>
-                                            @foreach($cart->items as $itemCheck)
-                                                @if($itemCheck['id'] == $item->id)
-                                                    <?php
-                                                    $check = 'playlist_add_check';
-                                                    ?>
-                                                @endif
-                                            @endforeach
-                                        <a href="{{route('addSong',['id'=>$item->id])}}">
+                                        @foreach ($cart->items as $itemCheck)
+                                            @if ($itemCheck['id'] == $item->id)
+                                                <?php
+                                                $check = 'playlist_add_check';
+                                                ?>
+                                            @endif
+                                        @endforeach
+                                        <a href="{{ route('addSong', ['id' => $item->id]) }}">
 
-                                        <span class=" add-playlist material-icons-outlined">
-                                            {{$check}}
-                                        </span>
+                                            <span class=" add-playlist material-icons-outlined">
+                                                {{ $check }}
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
@@ -117,5 +115,5 @@
                 </div>
             </div>
         </div>
-</div>
-    @endsection
+    </div>
+@endsection

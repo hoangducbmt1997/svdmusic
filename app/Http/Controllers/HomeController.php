@@ -55,7 +55,7 @@ class HomeController extends Controller
         $modelArtist = Artist::where('slug_artist',$slug)->first();
         $modelArea = Area::where('slug_area',$slug)->first();
         $artist = Artist::where('slug_artist',$slug)->first();
-        $artists = Artist::where('status',1)->orderBy('created_at','DESC')->limit(7)->get();
+        $artists = Artist::where('status',1)->orderBy('created_at','DESC')->limit(8)->get();
 
         //kiem tra user co dang ki artist ko
 
@@ -81,7 +81,7 @@ class HomeController extends Controller
         }
     }
     public function viewSong($id){
-        $artist = Artist::where('status',1)->orderBy('name_artist','ASC')->limit(7)->get();
+        $artist = Artist::where('status',1)->orderBy('name_artist','ASC')->limit(8)->get();
         $songSuggestion= Song::where('status',1)->orderBy('name_song','DESC')->get();
         $song = Song::where('id',$id)->where('status',1)->first();
         if($song){
@@ -176,7 +176,7 @@ class HomeController extends Controller
     }
     public function bxh()
     {
-        $artist = Artist::where('status',1)->orderBy('created_at','DESC')->limit(7)->get();
+        $artist = Artist::where('status',1)->orderBy('created_at','DESC')->limit(8)->get();
         $topSong = Song::where('status',1)->orderBy('view','DESC')->limit(3)->get();
         $song = Song::where('status',1)->orderBy('view','DESC')->get();
         return view('bxh',compact('song','topSong','artist'));
@@ -195,7 +195,7 @@ class HomeController extends Controller
     public function newSong()
     {
         $mv =MV::where('status',1)->orderBy('created_at','DESC')->get();
-        $artist = Artist::where('status',1)->orderBy('created_at','DESC')->limit(7)->get();
+        $artist = Artist::where('status',1)->orderBy('created_at','DESC')->limit(8)->get();
         $song = Song::where('status',1)->orderBy('created_at','DESC')->get();
         return view('newsong',compact('song','artist','mv'));
     }

@@ -19,7 +19,7 @@ class ArtistController extends Controller
      */
     public function index()
     {
-        $data = Artist::orderBy('created_at','DESC')->search()->paginate(8);
+        $data = Artist::orderBy('created_at','DESC')->search()->paginate(10);
         return view('admin.artist.index',compact('data'));
     }
 
