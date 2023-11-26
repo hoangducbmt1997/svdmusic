@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Admin</title>
-    <link rel="shortcut icon" type="image/png" href="{{ url('site')}}/image/Logo-mini.png" />
+    <link rel="shortcut icon" type="image/png" href="{{ url('public/site')}}/image/Logo-mini.png" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/dist/css/adminlte.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/dist/css/style.css">
+    <link rel="stylesheet" href="{{ url('public/siteadmin') }}/dist/css/style.css">
 </head>
 <body class="hold-transition login-page">
 <div class="img-blur">
-<img class='img-bg-admin' src="{{ url('site/image/banner-admin.gif') }}" alt="">
+<img class='img-bg-admin' src="{{ url('public/site/image/banner-admin.gif') }}" alt="">
 
 </div>
 
@@ -82,10 +82,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="{{ url('siteadmin') }}/plugins/jquery/jquery.min.js"></script>
+<script src="{{ url('public/siteadmin') }}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="{{ url('siteadmin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url('public/siteadmin') }}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{ url('siteadmin') }}/dist/js/adminlte.min.js"></script>
+<script src="{{ url('public/siteadmin') }}/dist/js/adminlte.min.js"></script>
 </body>
 </html>

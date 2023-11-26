@@ -60,10 +60,10 @@
 
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
 @endsection
 @section('js')
-    <script src="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function() {
             // Summernote

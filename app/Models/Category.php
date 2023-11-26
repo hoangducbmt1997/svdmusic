@@ -13,7 +13,7 @@ class Category extends Model
     //JOIN 1 - n
     public function songs()
     {
-        return $this->hasMany(song::class,'category_id','id');
+        return $this->hasMany(Song::class,'category_id','id');
     }
 
     // local scope

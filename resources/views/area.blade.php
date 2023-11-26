@@ -78,7 +78,7 @@
                                                 play_arrow
                                             </span></div>
                                         <div class="over-lay-item-info"></div>
-                                        <img onerror="this.src='{{ url('public/uploads/image_song/song_default.jpg') }}'"
+                                        <img onerror="this.src='{{ url('/public/uploads/image_song/song_default.jpg;') }}'"
                                             src="{{ url('public/uploads/image_song') }}/{{ $item->image_song }}">
                                     </div>
                                     <div class="item-info">

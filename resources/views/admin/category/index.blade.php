@@ -29,7 +29,7 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_category }}</td>
                     <td>{{ $item->songs ? $item->songs->count() : 0 }} </td>
-                    <td><img src="{{url('uploads/category')}}/{{$item->image_category}}" width="50" /></td>
+                    <td><img src="{{url('/public/uploads/category')}}/{{$item->image_category}}" width="50" /></td>
                     <td>
                         @if ($item->status == 0)
                             <span class="badge badge-danger">Private</span>

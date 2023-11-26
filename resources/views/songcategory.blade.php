@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', $category->name_category)
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/artist.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/artist.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-mobile">

@@ -13,11 +13,11 @@ class Artist extends Model
     /*-- 1-n --*/
     public function songs()
     {
-        return $this->hasMany(song::class,'artist_id','id');
+        return $this->hasMany(Song::class,'artist_id','id');
     }
     public function area()
     {
-        return $this->hasOne(area::class,'id','area_id');
+        return $this->hasOne(Area::class,'id','area_id');
     }
     public function scopeSearch($query)
     {

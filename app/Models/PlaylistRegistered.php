@@ -12,6 +12,6 @@ class PlaylistRegistered extends Model
     protected $fillable = ['id','account_id','playlist_id','status'];
     public function playlist()
     {
-        return $this->hasOne(playlist::class,'id','playlist_id');
+        return $this->hasOne(Playlist::class,'id','playlist_id');
     }
 }

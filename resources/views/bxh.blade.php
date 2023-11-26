@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', 'Bảng xếp hạng')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/rank-song.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/rank-song.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-mobile">
@@ -30,7 +30,7 @@
                         <div class="wrapper-title-lyrics">
                             <p class="title-suggesstion">Lời bài hát :</p>
                         </div>
-                        <div class="lyric-wrap">
+                        <div id="abc" class="lyricwrap">
                             <div class="lyric"></div>
                         </div>
 

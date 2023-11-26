@@ -27,7 +27,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
-                    <td><img  onerror="this.src='{{url('uploads/user/avatar_default.jpg')}}'" src="{{url('public/uploads/user')}}/{{$item->image_user}}" width="50" /></td>
+                    <td><img  onerror="this.src='{{url('public/uploads/user/avatar_default.jpg')}}'" src="{{url('public/public/uploads/user')}}/{{$item->image_user}}" width="50" /></td>
                     <td>{{ $item->email }}</td>
 
                     <td>{{ $item->created_at->format('d-m-Y') }}</td>

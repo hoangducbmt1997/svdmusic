@@ -29,7 +29,7 @@
                 <tr>
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name_artist }}</td>
-                    <td><img onerror="this.src='{{url('uploads/artist/avatar_default.jpg')}}'" src="{{url('uploads/artist')}}/{{$item->image_artist}}" width="50" /></td>
+                    <td><img onerror="this.src='{{url('/public/uploads/artist/avatar_default.jpg')}}'" src="{{url('/public/uploads/artist')}}/{{$item->image_artist}}" width="50" /></td>
                     <td>{{ $item->birth_day_artist ? $item->birth_day_artist : 'Chưa cập nhật'  }}</td>
                     <td ><div class="description-artist">{{ $item->description_artist ? $item->description_artist : 'Chưa cập nhật' }}</div></td>
                     <td>{{ $item->area->name_area }}</td>

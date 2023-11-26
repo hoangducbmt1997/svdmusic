@@ -35,8 +35,8 @@
                     <td>{{ $item->cate->name_category}} </td>
                     <td>{{ $item->artist->name_artist}} </td>
                     <td>{{ $item->area->name_area }}</td>
-                    <td><img onerror="this.src='{{url('uploads/image_song/song_default.jpg')}}'" src="{{url('uploads/image_song')}}/{{$item->image_song}}" width="50"/></td>
-                    <td><img onerror="this.src='{{url('uploads/banner_song/video_default.jpg')}}'"  src="{{url('uploads/banner_song')}}/{{$item->image_bannersong}}" width="100"/></td>
+                    <td><img onerror="this.src='{{url('public/uploads/image_song/song_default.jpg')}}'" src="{{url('public/uploads/image_song')}}/{{$item->image_song}}" width="50"/></td>
+                    <td><img onerror="this.src='{{url('public/uploads/banner_song/video_default.jpg')}}'"  src="{{url('public/uploads/banner_song')}}/{{$item->image_bannersong}}" width="100"/></td>
                     <td>
                         @if ($item->status == 0)
                             <span class="badge badge-danger">Private</span>

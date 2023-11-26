@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', $top100->name_top100)
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/artist.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/artist.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-mobile">
@@ -125,7 +125,7 @@
                                                         ?>
                                                     @endif
                                                 @endforeach
-                                                <a href="{{ route('home.addSong', ['id' => $item->id]) }}">
+                                                <a href="{{ route('addSong', ['id' => $item->id]) }}">
 
                                                     <span class=" add-playlist material-icons-outlined">
                                                         {{ $check }}

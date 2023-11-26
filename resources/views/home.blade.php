@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', 'Trang chủ')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/index.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-slide">
@@ -44,8 +44,8 @@
                                         </button>
                                     </div>
                                     <div class="overlay"></div>
-                                    <img onerror="this.src='{{ url('uploads/top100/top100_default.jpg') }}'"
-                                        src="{{ url('uploads/top100') }}/{{ $item->image_top100 }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/top100/top100_default.jpg') }}'"
+                                        src="{{ url('public/uploads/top100') }}/{{ $item->image_top100 }}" />
                                 </div>
                             </div>
                         </a>
@@ -68,8 +68,8 @@
                                         </button>
                                     </div>
                                     <div class="overlay"></div>
-                                    <img onerror="this.src='{{ url('uploads/category/category_default.jpg') }}'"
-                                        src="{{ url('uploads/category') }}/{{ $item->image_category }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/category/category_default.jpg') }}'"
+                                        src="{{ url('public/uploads/category') }}/{{ $item->image_category }}" />
                                 </div>
                             </div>
                         </a>
@@ -213,8 +213,8 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
-                                        src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
+                                    <img onerror="this.src='{{ url('public/uploads/artist/avatar_default.jpg') }}'"
+                                        src="{{ url('public/uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>
                             </div>

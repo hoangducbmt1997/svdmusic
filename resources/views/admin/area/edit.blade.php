@@ -52,5 +52,5 @@
     </form>
 @endsection
 @section('js')
-    <script src="{{ url('siteadmin') }}/dist/js/slug.js"></script>
+    <script src="{{ url('/public/siteadmin') }}/dist/js/slug.js"></script>
 @endsection

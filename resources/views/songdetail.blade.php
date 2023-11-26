@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', $song->name_song)
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/song.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/site') }}/css/song.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-mobile">
@@ -24,7 +24,7 @@
                         <div class="wrapper-title-lyrics">
                             <p class="title-suggesstion">Lời bài hát :</p>
                         </div>
-                        <div class="lyric-wrap">
+                        <div id="abc" class="lyricwrap">
                             <div class="lyric"></div>
                         </div>
                     </div>
@@ -137,8 +137,8 @@
                                 <div class="wrapper-artist">
                                     <div class="overlay"></div>
                                     <span class="material-icons">play_arrow</span>
-                                    <img onerror="this.src='{{ url('uploads/artist/avatar_default.jpg') }}'"
-                                        src="{{ url('uploads/artist') }}/{{ $item->image_artist }}" />
+                                    <img onerror="this.src='{{ url('/public/uploads/artist/avatar_default.jpg') }}'"
+                                        src="{{ url('/public/uploads/artist') }}/{{ $item->image_artist }}" />
                                 </div>
                                 <div class="name-artist">{{ $item->name_artist }}</div>
                             </div>

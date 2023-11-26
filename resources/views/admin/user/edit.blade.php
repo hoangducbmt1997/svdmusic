@@ -40,7 +40,7 @@
           <label for="">Image User</label>
           <div>
             <input type="file" name="upload_image" >
-            <img onerror="this.src='{{url('uploads/user/avatar_default.jpg')}}'" src="{{url('uploads/user')}}/{{$user->image_user}}" width="50" />
+            <img onerror="this.src='{{'public/uploads/user/avatar_default.jpg')}}'" src="{{'public/uploads/user')}}/{{$user->image_user}}" width="50" />
           </div>
 
         </div>

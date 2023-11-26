@@ -1,6 +1,6 @@
 @extends('layouts.site')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ url('site') }}/css/user.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url('public/site') }}/css/user.css" />
 @endsection
 @section('main')
     <div class="ms-wrapper-mobile">
@@ -114,19 +114,19 @@
             <div class="ms-sugesstion-song">
                 <div class="owl-carousel carousel-play-list-user">
                     <!--
-                            <div class="item">
-                                <div class="playlist-user-item-avatar">
-                                    <img src="{{ url('site') }}/image/edm_playlist.png" />
-                                </div>
-                                <div class="playlist-user-item-info playlist-user-item-add flex-center">
+                    <div class="item">
+                        <div class="playlist-user-item-avatar">
+                            <img src="{{ url('site') }}/image/edm_playlist.png" />
+                        </div>
+                        <div class="playlist-user-item-info playlist-user-item-add flex-center">
 
-                                    <span class="btn-add-playlist-user material-icons-outlined">
-                                        add_circle_outline
-                                    </span>
-                                    <p class="title-add-playlist">THÊM PLAYLIST</p>
-                                </div>
-                            </div>
-                            -->
+                            <span class="btn-add-playlist-user material-icons-outlined">
+                                add_circle_outline
+                            </span>
+                            <p class="title-add-playlist">THÊM PLAYLIST</p>
+                        </div>
+                    </div>
+                    -->
                     @foreach ($registeredTop100 as $item)
                         <a href="{{ route('view.top100', ['id' => $item->top100->id]) }}">
                             <div class="item">

@@ -19,7 +19,7 @@
                     <label for="">Image Artist: {{$artist->image_artist ? $artist->image_artist : 'Chưa có ảnh' }}</label>
                     <div>
                         <input type="file" name="upload_image">
-                        <img onerror="this.src='{{url('uploads/artist/avatar_default.jpg')}}'" src="{{ url('uploads/artist') }}/{{ $artist->image_artist }}" width="50" />
+                        <img onerror="this.src='{{url('/public/uploads/artist/avatar_default.jpg')}}'" src="{{ url('/public/uploads/artist') }}/{{ $artist->image_artist }}" width="50" />
                     </div>
                 </div>
                 <div class="form-group">
@@ -86,11 +86,11 @@
 
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
 @endsection
 @section('js')
-    <script src="{{ url('siteadmin') }}/dist/js/slug.js"></script>
-    <script src="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="{{ url('/public/siteadmin') }}/dist/js/slug.js"></script>
+    <script src="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function() {
             // Summernote

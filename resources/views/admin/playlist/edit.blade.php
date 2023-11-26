@@ -19,7 +19,7 @@
                     <label for="">Image playlist</label>
                     <div>
                         <input type="file" name="upload_image">
-                        <img onerror="this.src='{{url('uploads/playlist/playlist_default.jpg')}}'" src="{{ url('uploads/playlist') }}/{{ $playlist->image_playlist }}" width="50" />
+                        <img onerror="this.src='{{url('/public/uploads/playlist/playlist_default.jpg')}}'" src="{{ url('/public/uploads/playlist') }}/{{ $playlist->image_playlist }}" width="50" />
                     </div>
                 </div>
             </div>
@@ -51,10 +51,10 @@
 
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.css">
 @endsection
 @section('js')
-    <script src="{{ url('siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="{{ url('/public/siteadmin') }}/plugins/summernote/summernote-bs4.min.js"></script>
     <script>
         $(function() {
             // Summernote
